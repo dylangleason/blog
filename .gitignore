@@ -1,7 +1,14 @@
+# scheme backup files
 *.ss~
 *.ss#*
 .#*.ss
-
 *.scm~
 *.scm#*
 .#*.scm
+
+# editor files
+.projectile
+*.~undo-tree~
+
+# dist files
+site/
