@@ -44,6 +44,7 @@ also a fan of the Portland Trail Blazers. Go "
     (title ,(string-append title " — " (site-title site)))
     ,(stylesheet "//fonts.googleapis.com/css?family=Open+Sans:400|Open+Sans:700|JetBrains+Mono:400")
     ,(stylesheet "//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/default.min.css")
+    ,(stylesheet "css/normalize.css")
     ,(stylesheet "css/main.css")
     (script (@ (src "//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js")))
     (script "hljs.highlightAll();")))
