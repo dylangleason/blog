@@ -16,10 +16,10 @@
 
     // Configure theme toggle glyph and on-click event listener for changing theme
     const getSystemTheme = () => 
-      window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light"
+	    window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light"
 
     const toggleTheme = (currentTheme) =>
-      currentTheme === "dark" ? "light" : "dark"
+	    currentTheme === "dark" ? "light" : "dark"
 
     const toggleButton = document.querySelector(".theme-toggle")
     const toggleKnob = document.querySelector(".theme-toggle::after")
@@ -32,9 +32,9 @@
     toggleButton.addEventListener("click", e => {
       const docElement = document.documentElement
       if (!currentTheme) {
-	currentTheme = getSystemTheme()
+	      currentTheme = getSystemTheme()
       } else {
-	docElement.classList.remove(currentTheme)
+	      docElement.classList.remove(currentTheme)
       }
       currentTheme = toggleTheme(currentTheme)
       docElement.classList.add(currentTheme)
