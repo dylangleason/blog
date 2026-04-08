@@ -12,3 +12,6 @@
 
 # dist files
 site/
+
+# nodejs dependencies
+node_modules/
