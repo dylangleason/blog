@@ -34,12 +34,12 @@ html {
 
 @media (prefers-color-scheme: dark) {
     :root {
-	--bg: #1a1a1a;
-	--text: #e0e0e0;
-	--text-muted: #aaaaaa;
-	--border: #333333;
-	--accent: #3b82f6;
-	--accent-hover: #60a5fa;
+        --bg: #1a1a1a;
+        --text: #e0e0e0;
+        --text-muted: #aaaaaa;
+        --border: #333333;
+        --accent: #3b82f6;
+        --accent-hover: #60a5fa;
     }
 }
 
@@ -179,23 +179,23 @@ nav a:hover {
 
 @media (min-width: 620px) {
     .nav-toggle {
-	display: none;
+        display: none;
     }
 
     .links {
-	display: flex;
-	flex-direction: row;
-	gap: var(--space-3);
-	padding-right: var(--space-3);
+        display: flex;
+        flex-direction: row;
+        gap: var(--space-3);
+        padding-right: var(--space-3);
     }
 
     .links.open {
-	flex-direction: row;
-	width: auto;
-	position: static;
-	background-color: none;
-	border: none;
-	padding-right: var(--space-3);
+        flex-direction: row;
+        width: auto;
+        position: static;
+        background-color: none;
+        border: none;
+        padding-right: var(--space-3);
     }
 }
 
