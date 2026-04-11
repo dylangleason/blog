@@ -177,7 +177,7 @@ nav a:hover {
     position: absolute;
     top: 100%;
     right: 0;
-    width: 30%;
+    width: 28%;
     background-color: var(--bg);
     border: 1px solid var(--border);
     border-radius: 0px 0px 0px 10px;
@@ -281,7 +281,6 @@ footer {
     border-radius: 13px;
     color: var(--text-muted);
     position: relative;
-    /*margin-left: auto;*/
 }
 
 .theme-toggle::after {

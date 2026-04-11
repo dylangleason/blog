@@ -9,10 +9,10 @@ _published_ blog post.
 The idea of a personal blog has been knocking around in my head for a
 while, and the code base for this website has been gestating
 since 2021. As in 2021, the primary impetus for starting a blog is the
-sudden abundance of time I found myself with due to unemployment.
+sudden abundance of time I've been granted due to recent unemployment.
 
 I suppose a bit of an explanation is in order. I was laid off late
-last year just prior to concluding a rather large project for a major
+last year, just prior to concluding a rather large project for a major
 casino and resort company. While there, I helped build a fairly
 complex web backend for a real-money online casino. The work was equal
 parts challenging, frustrating, and illuminating, and I definitely
