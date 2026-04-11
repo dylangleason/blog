@@ -27,8 +27,8 @@ html {
     --max-width: 780px;
     --font-body: system-ui, sans-serif;
     --font-mono: ui-monospace, monospace;
-    --font-size: 1.25rem;
-    --font-size-sm: 1rem;
+    --font-size: 1rem;
+    --font-size-sm: 0.85rem;
     --line-height: 1.6;
 }
 
@@ -130,7 +130,7 @@ nav a:hover {
     width: 44px;
     padding: var(--space-2) 0 var(--space-2) 0;
     margin: 0;
-    /*margin-left: auto;*/
+    margin-left: auto;
 }
 
 .nav-toggle span {
@@ -165,26 +165,32 @@ nav a:hover {
 
 .links {
     display: none;
-    /*margin-left: auto;*/
+    margin-left: auto;
 }
 
 .links.open {
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
+    align-items: flex-start;
     padding: var(--space-2);
     width: 100%;
     position: absolute;
     top: 100%;
     right: 0;
-    width: 25%;
+    width: 30%;
     background-color: var(--bg);
     border: 1px solid var(--border);
     border-radius: 0px 0px 0px 10px;
     z-index: 1;
 }
 
-@media (min-width: 620px) {
+.links a {
+    display: flex;
+    align-items: center;
+    gap: var(--space-1);
+}
+
+@media (min-width: 680px) {
     .nav-toggle {
         display: none;
     }
@@ -214,10 +220,9 @@ nav a:hover {
     text-transform: lowercase;
 }
 
-.title a::before {
-    content: "> ";
-    /*color: var(--accent);*/
-}
+/* .title a::before { */
+/*     content: "> "; */
+/* } */
 
 .title img {
     padding-top: 1rem;
@@ -276,7 +281,7 @@ footer {
     border-radius: 13px;
     color: var(--text-muted);
     position: relative;
-    margin-left: auto;
+    /*margin-left: auto;*/
 }
 
 .theme-toggle::after {

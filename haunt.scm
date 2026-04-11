@@ -7,7 +7,8 @@
              (haunt reader commonmark)
              (haunt site)
              (srfi srfi-19)
-             (srfi srfi-42))
+             (srfi srfi-42)
+             (icons))
 
 (define (stylesheet ref)
   `(link (@ (rel "stylesheet")
@@ -31,37 +32,24 @@
     ,(stylesheet "main.css")
     ,(script "main.js")))
 
-(define feed-svg
-  `(svg (@ (xmlns "http://www.w3.org/2000/svg")
-           (fill "none")
-           (viewBox "0 0 24 24")
-           (stroke-width "1.5")
-           (stroke "currentColor")
-           (width "16")
-           (height "16"))
-        (path (@ (stroke-linecap "round")
-                 (stroke-linejoin "round")
-                 (d "M12.75 19.5v-.75a7.5 7.5 0 0 0-7.5-7.5H4.5m0-6.75h.75c7.87 0 14.25 6.38 14.25 14.25v.75M6 18.75a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z")))))
-
 (define nav
   `(nav
     (@ (class "nav"))
     (ul
      (@ (class "title"))
      (li (a (@ (href "/")) "dylan gleason")))
-    (button (@ (class "theme-toggle")))
     (button (@ (class "nav-toggle")
                (aria-label "Toggle navigation")
                (aria-expanded "false"))
             (span))
     (ul
      (@ (class "links"))
-     (li (a (@ (href "/index.html")) "posts"))
-     (li (a (@ (href "/about.html")) "about"))
-     (li (a (@ (href "//github.com/dylangleason")) "github"))
-     (li (a (@ (href "//linkedin.com/in/dylangleason")) "linkedin")))
-    (a (@ (href "/feed.xml") (class "feed") (aria-label "RSS feed"))
-       ,feed-svg)))
+     (li (a (@ (href "/index.html")) ,posts-icon "posts"))
+     (li (a (@ (href "/feed.xml")) ,feed-icon "feed"))
+     (li (a (@ (href "/about.html")) ,about-icon "about"))
+     (li (a (@ (href "//github.com/dylangleason")) ,github-icon "github"))
+     (li (a (@ (href "//linkedin.com/in/dylangleason")) ,linkedin-icon "linkedin")))
+    (button (@ (class "theme-toggle")))))
 
 (define (post-preview post)
   (let loop ((lst (post-sxml post)))
