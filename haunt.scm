@@ -31,12 +31,25 @@
     ,(stylesheet "main.css")
     ,(script "main.js")))
 
+(define feed-svg
+  `(svg (@ (xmlns "http://www.w3.org/2000/svg")
+           (fill "none")
+           (viewBox "0 0 24 24")
+           (stroke-width "1.5")
+           (stroke "currentColor")
+           (width "16")
+           (height "16"))
+        (path (@ (stroke-linecap "round")
+                 (stroke-linejoin "round")
+                 (d "M12.75 19.5v-.75a7.5 7.5 0 0 0-7.5-7.5H4.5m0-6.75h.75c7.87 0 14.25 6.38 14.25 14.25v.75M6 18.75a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z")))))
+
 (define nav
   `(nav
     (@ (class "nav"))
     (ul
      (@ (class "title"))
      (li (a (@ (href "/")) "dylan gleason")))
+    (button (@ (class "theme-toggle")))
     (button (@ (class "nav-toggle")
                (aria-label "Toggle navigation")
                (aria-expanded "false"))
@@ -47,7 +60,8 @@
      (li (a (@ (href "/about.html")) "about"))
      (li (a (@ (href "//github.com/dylangleason")) "github"))
      (li (a (@ (href "//linkedin.com/in/dylangleason")) "linkedin")))
-    (button (@ (class "theme-toggle")))))
+    (a (@ (href "/feed.xml") (class "feed") (aria-label "RSS feed"))
+       ,feed-svg)))
 
 (define (post-preview post)
   (let loop ((lst (post-sxml post)))
@@ -84,6 +98,11 @@
            (post-ref post 'author)
            " — "
            (format-date (post-date post)))))
+     (div (@ (class "tags"))
+          "Tags:"
+          ,(list-ec (:list tag (post-tags post))
+                    `(a (@ (href ,(string-append "/feeds/tags/" tag ".xml")))
+                        ,tag)))
      ,(post-sxml post))))
 
 (define (pagination-template site body prev-page next-page)

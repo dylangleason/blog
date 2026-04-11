@@ -27,8 +27,8 @@ html {
     --max-width: 780px;
     --font-body: system-ui, sans-serif;
     --font-mono: ui-monospace, monospace;
-    --font-size: 1rem;
-    --font-size-sm: 0.875rem;
+    --font-size: 1.25rem;
+    --font-size-sm: 1rem;
     --line-height: 1.6;
 }
 
@@ -101,6 +101,7 @@ nav {
     align-items: center;
     display: flex;
     flex-wrap: wrap;
+    gap: var(--space-3);
     justify-content: flex-start;
     padding-block: var(--space-3);
     border-bottom: 1px solid var(--border);
@@ -127,9 +128,9 @@ nav a:hover {
     justify-content: center;
     cursor: pointer;
     width: 44px;
-    padding: var(--space-2) var(--space-2) var(--space-2) 0;
+    padding: var(--space-2) 0 var(--space-2) 0;
     margin: 0;
-    margin-left: auto;
+    /*margin-left: auto;*/
 }
 
 .nav-toggle span {
@@ -158,9 +159,13 @@ nav a:hover {
     top: 8px;
 }
 
+.feed {
+    display: flex;
+}
+
 .links {
     display: none;
-    margin-left: auto;
+    /*margin-left: auto;*/
 }
 
 .links.open {
@@ -188,7 +193,6 @@ nav a:hover {
         display: flex;
         flex-direction: row;
         gap: var(--space-3);
-        padding-right: var(--space-3);
     }
 
     .links.open {
@@ -197,7 +201,6 @@ nav a:hover {
         position: static;
         background-color: none;
         border: none;
-        padding-right: var(--space-3);
     }
 }
 
@@ -206,14 +209,14 @@ nav a:hover {
     font-family: ui-monospace, monospace;
     letter-spacing: 0.1em;
     font-weight: bold;
-    font-size: 14px;
+    font-size: var(--font-size-sm);
     text-decoration: none;
     text-transform: lowercase;
 }
 
 .title a::before {
-    content: "~ ";
-    color: var(--accent);
+    content: "> ";
+    /*color: var(--accent);*/
 }
 
 .title img {
@@ -273,6 +276,7 @@ footer {
     border-radius: 13px;
     color: var(--text-muted);
     position: relative;
+    margin-left: auto;
 }
 
 .theme-toggle::after {
@@ -299,6 +303,14 @@ html.light .theme-toggle::after {
 .byline {
     font-weight: bold;
     margin: 0;
+}
+
+.tags {
+    display: flex;
+    color: var(--text-muted);
+    gap: var(--space-2);
+    font-size: 0.9em;
+    padding-block: var(--space-2);
 }
 
 code {
