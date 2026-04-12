@@ -6,10 +6,6 @@ html {
     box-sizing: inherit;
 }
 
-*, *::before, *::after {
-    transition: background-color 0.15s ease, color 0.15s ease, border-color 0.15s ease;
-}
-
 :root {
     --bg: #ffffff;
     --bg-shift: #fdfdfd;
@@ -61,6 +57,26 @@ html.light {
     --border: #dcdcdc;
     --accent: #2563eb;
     --accent-hover: #1d4ed8;
+}
+
+a,
+body,
+code,
+footer,
+main,
+nav,
+nav a,
+pre,
+.date,
+.links.open,
+.nav-toggle span,
+.nav-toggle span::after,
+.nav-toggle span::before,
+.preview,
+.preview:nth-child(even),
+.tags,
+.title a {
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
 }
 
 body {
@@ -225,10 +241,6 @@ nav a:hover {
 /* .title a::before { */
 /*     content: "> "; */
 /* } */
-
-.title img {
-    padding-top: 1rem;
-}
 
 main {
     flex-grow: 1;
