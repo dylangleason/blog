@@ -33,5 +33,7 @@ is to say: I may also write about current events and politics from
 time to time. So if you "don't do politics", consider yourself warned.
 
 With that said, I hope to write a new post at least once a month.
-Though I am not holding myself to such a commitment, there's obviously
-a lot to talk about these days, so I think I can manage.
+Though I am not holding myself to such a commitment, I think I can
+manage.
+
+Until next time&hellip;

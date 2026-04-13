@@ -193,7 +193,7 @@ nav a:hover {
     position: absolute;
     top: 100%;
     right: 0;
-    width: 28%;
+    width: 30%;
     background-color: var(--bg);
     border: 1px solid var(--border);
     border-radius: 0px 0px 0px 10px;
