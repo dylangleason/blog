@@ -15,8 +15,8 @@ stacks. My polyglot, "jack of all trades, master of none" background
 seems particularly ill-suited to this very competitive market.
 
 Though I am searching for backend _product_ engineering roles, because
-I am also looking primarily at companies that use Go in their tech
-stacks, most of the open roles I've seen are focused more on
+I am also looking primarily at companies that require Go programming
+skills, most of the open Go roles I've seen are focused more on
 _platform_ engineering. This makes sense, as Go is a language that is
 particularly well suited to a lot of platform engineering
 tasks. Typically these roles require a fair amount of experience with
@@ -58,14 +58,14 @@ Of course, there are your LeetCode style assessments. These were
 always annoying, and are now even more so, in part due to rampant
 [AI-assisted cheating](https://tech.yahoo.com/articles/cheating-tech-interviews-soaring-managers-080901006.html)
 and interview fraud making the experience worse for everyone. What
-this translates to in practice is use of _proctored_ tests. In one
+this translates to in practice is use of proctored tests. In one
 such test, I had to turn my camera on, solve a sequence of contrived
-algo problems, and explain my thought process throughout. The test
+algorithm problems, and explain my thought process throughout. The test
 proctor didn't interact with me outside of warning me when time was
 almost up. Then there are the ones where you have to use Codility
 or CodeSignal or any of the other enumerable web editors with
 automated test harnesses and the like. The unifying theme here is no
-intelocuter to bounce ideas off of or converse with. Not fun.
+interlocutor to bounce ideas off of or converse with. Not fun.
 
 ### Pair-Programming? Yay!
 One company I interviewed with for a senior engineer role conducted
