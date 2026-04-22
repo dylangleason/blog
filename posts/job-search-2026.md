@@ -19,7 +19,7 @@ I am also looking primarily at companies that require Go programming
 skills, most of the open Go roles I've seen are focused more on
 _platform_ engineering. This makes sense, as Go is a language that is
 particularly well suited to a lot of platform engineering
-tasks. Typically these roles require a fair amount of experience with
+tasks. Typically, these roles require a fair amount of experience with
 container orchestration technologies, in particular Kubernetes. Since
 I don't have a ton of professional experience with Kubernetes, I am
 finding trouble positioning myself with hiring managers for these
@@ -51,7 +51,7 @@ important now.
 I encountered most of the usual suspects for technical screens, but
 also one new format that I hadn't experienced (more on that
 below). Notably, companies appear to be utilizing pre-interview
-screening assessments more frequently than in days past.
+screening assessments more frequently than in past interview cycles.
 
 ### LeetCode&hellip; Yay
 Of course, there are your LeetCode style assessments. These were
@@ -77,14 +77,14 @@ requirements. In other words, it focused on a real-world engineering
 problem. Fun, actually!
 
 ### The "Take-Home"
-Then, of course, there are your so-called "take-home" projects. While
-I often enjoy these for the sake of learning, they tend to be a big
-time-sink and usually result in summary rejection. The ones that do
-get through, I end up spending at least double the amount of time
-stated to solve the problem. As an interview format, it feels too
-squishy and subject to the whims and biases of the person reading the
-code to be worthwhile, but I know a lot of people prefer these to the
-live coding interview format.
+Then, there are your so-called "take-home" projects. While I often
+enjoy these for the sake of learning, they tend to be a big time-sink
+and tend to have a low success rate. The ones that do get through, I
+end up spending at least double the amount of time stated to solve the
+problem. As an interview format, it feels too squishy and subject to
+the whims and biases of the person reading the code to be worthwhile,
+but I know a lot of people prefer these to the live coding interview
+format.
 
 ### Uh...
 That leaves the weirdest one: a cognitive aptitude test. Specifically,
@@ -102,8 +102,8 @@ screens when trying to vet hundreds of candidates for a single role
 have less tolerance for these types of assessments, especially the
 older I get, and the more automated and impersonal they become. I
 always go back and forth on whether I should opt out of these
-entirely, but I will probably continue to do them, as we software
-engineers continue our transformation into a 21st century digital
+entirely, but I will probably continue to do them, contiuning my
+transformation into a 21st century digital
 [lumpenproletariat](https://www.newyorker.com/culture/infinite-scroll/will-ai-trap-you-in-the-permanent-underclass).
 
 ## The Elephant in the Room
@@ -133,11 +133,6 @@ objective and implementing tests validating the requirements, the code
 quality was&hellip; unremarkable. Perhaps another coding agent such as
 Claude Code would have produced higher quality output, but I could
 nonetheless see their point. Moving on.
-
-At the end of the day, I think reviewers still want to review high
-quality code, though I wonder how this expectation changes on the job
-when reviewers presumably need to write and review a large volume of
-LLM generated code on a daily basis.
 
 ### AI in Practice
 Among the hiring managers and devs for the roles I interviewed with,
@@ -184,8 +179,7 @@ redirect the conversation by expressing my desire for a long-term
 position. But, when probing the circumstances around my departure from
 one particular company, the hiring manager seemed incredulous that I
 should be laid off given the seeming importance of my role. Fair
-enough, I guess. Sometimes you aren't gonna please people, no matter
-how hard you try.
+enough, I guess. Sometimes you aren't gonna please people.
 
 ## Miscellaneous
 
@@ -198,7 +192,8 @@ gone through an interview. I suspect this is due mostly to
 disorganization and trying to juggle multiple (perhaps dozens) of
 candidates for various roles at a time, but it still isn't a great
 feeling to be ghosted. And of course this says nothing about LinkedIn
-recruitment scams and fake job postings out there.
+[recruitment scams](https://www.forbes.com/sites/technology/article/how-to-spot-and-avoid-linkedin-scams/) 
+and other fake job postings out there.
 
 ### Hiring Managers
 Hiring managers seem to be a lot pickier this time around as well,
@@ -206,8 +201,8 @@ which aligns nicely with the aforementioned "crappy job market" theme
 I've been rolling with. For base qualifications, they seem to want the
 sun and the moon, even for contract roles. If I manage to get an
 interview with the hiring manager, they are pretty
-hit-and-miss. Sometimes I knock it out of the park, other times it is
-evident that they lost interest.
+hit-and-miss. Sometimes I knock it out of the park, other times it
+becomes evident that they have no interest.
 
 Though I usually do quite well on behavioral or "culture fit"
 interviews, there's at least one question I get asked that I don't
@@ -220,48 +215,69 @@ browser (I caught one yawning, too. Ouch.).
 
 ### Interview Preparation
 
+#### Behavioral
 Speaking of STAR method stories and GenAI, I have been using the
 latter to good effect to help me refine the former. Typically, these
-stories need to be delivered within a minute and with utmost clarity,
-and I have found ChatGPT is particularly good at editing for
-clarity. It also seems to excel at "interview" speak, which is a nice
-bonus.
+stories need to be delivered within a minute and with utmost
+clarity—and I have found LLMs are pretty decent when editing for
+clarity, especially when the language is interview-ese.
 
-For technical rounds, I have also been using ChatGPT and Claude to
-help brush up on certain technical topics. For example, I had an
-interview where a hiring manager hinted that the system design portion
-of the interview might be to implement a leaderboard or a chat
-system. Prior to the interview, I used ChatGPT to structure system
-design interview questions for both, then I walked through my
-solution, discussed my approach and tradeoffs, and then requested
-feedback.
+#### System Design
+For system design interviews, I have been re-reading sections of
+[_Designing Data-Intensive Applications_](https://dataintensive.net/)
+and have also been using LLM chatbots to help brush up on certain
+technical topics. For example, I had an interview where a hiring
+manager hinted that the system design portion of the interview might
+be to implement a leaderboard or a chat system. Prior to the
+interview, I used ChatGPT to structure system design interview
+questions on these topics, then I walked through my solutions,
+discussed my approach and tradeoffs, and then requested feedback.
 
-Similarly, I wanted to brush up on various concurrency patterns in Go
-using goroutines. It's one of those things in Go that one uses often
-enough to justify getting quizzed on, but infrequently enough to be
-able to reproduce the patterns from memory when asked randomly in the
-context of an interview or technical screen. I had it generate
-examples for different types of workflows using goroutines and
-channels, including fan-in / fan-out pipelines, workloads using write
-vs read-write mutexes, and so on. I then asked it to wrap examples in
-a convenient little CLI executable that accepted flag arguments for
-testing the various scenarios. All of this in a matter of
-seconds. Neat!
+#### Live Coding
+For two different backend Go roles, I was asked to do live coding
+assessments, and I wanted to try and anticipate what kinds of
+questions each interviewer might ask. One recruiter indicated the
+interviewer for one role was interested in someone who had a firm
+grasp of relational databases, in particular someone who knew how to
+write efficient queries. Another indicated that I would likely be
+asked a concurrency related problem. Similar to the system design
+task, I enlisted ChatGPT's help to design a test harness for several
+different scenarios in each domain, and in each case I asked it to
+produce a program that I could play around with to test.
 
-This, along with structured learning plans (e.g. helping me build a
-[project](https://codeberg.org/corginapalm/daudio/src/branch/main) to
-learn basic audio DSP, from first principles), has been one of my
-favorite ways to use generative AI tools during this lull in
-employment.
+For RDBMS stuff, I designed a basic order and shipments system, I then
+prompted ChatGPT to generate a script for quickly migrating and
+seeding the database with enough data to demonstrate query efficiency,
+then had it implement queries for things like keyset pagination,
+aggregations, choosing appropriate indexes to improve efficiency as
+the data scaled, as well as common Go / SQL interop patterns.
+
+For the concurrency related interview, I again prompted ChatGPT to
+generate examples for different types of workflows using goroutines
+and channels, including fan-in / fan-out pipelines, workloads using
+write vs read-write mutexes, and so on. I then asked it to wrap
+examples in a convenient little CLI executable that accepted flag
+arguments for testing the various scenarios. All of this in a matter
+of seconds. Neat!
+
+#### No LeetCode Grind
+I didn't grind any LeetCode. While I have done so in years past, I can
+rarely ever motivate myself to do so, and this time was no exception.
 
 ## Conclusion
 For all the rapid changes in software each new year, it is striking
-how _little_ the software engineer interview process has changed. Even
-the oft-hyped AI hasn't really seemed to make much of an impact on the
-experience, except to perhaps make it slightly more annoying. It seems
-that employers are mostly doubling down on existing tech interview
-processes, there are just more of them, they're more difficult and
-more time-consuming. But, for every 10 annoying multi-round gauntlets,
-there are always a few gems here and there. And regardless, it's
-always a good opportunity to improve my skills and clarify my
-strengths, weaknesses and career goals.
+how little the software engineer interview process has changed. 
+
+Even the oft-hyped "AI" hasn't really seemed to make much of an impact
+on the interview process overall, except to perhaps make it slightly
+more annoying. On the other hand, my own use of LLMs for interview
+preparation has been somewhat fruitful.
+
+Either way, it seems that employers are mostly doubling down on
+existing tech interview processes; there are just more of them,
+they're more difficult, and more time-consuming. 
+
+But, for every 10 annoying multi-round gauntlets, there are always a
+few gems here and there. And, it's generally a good opportunity to
+improve my skills and clarify my strengths, weaknesses and career
+goals.

@@ -72,7 +72,7 @@
                                     ,(format-date (post-date post)))
                                (div (@ (class "opener"))
                                     ,(post-preview post))
-                               (a (@ (href ,path)) "[…]")))))))
+                               (a (@ (href ,path)) "Read More…")))))))
 
 (define (post-template post)
   `((article
