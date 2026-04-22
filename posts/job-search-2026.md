@@ -1,5 +1,5 @@
 title: Job Search 2026
-date: 2026-04-12 13:20
+date: 2026-04-21 13:20
 tags: job, ai, tech
 ---
 
