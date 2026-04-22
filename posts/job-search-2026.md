@@ -1,35 +1,36 @@
 title: Job Search 2026
 date: 2026-04-12 13:20
-tags: work
+tags: job, ai, tech
 ---
 
-After 4 months of searching for a software engineering job, I've come
-away with a few observations, along with some other stray thoughts
-that seem worth sharing, regarding my personal experience in current
-job market.
+After roughly 4 months of searching for a software engineering job,
+I've come away with a few observations, along with some other stray
+thoughts that seem worth sharing, regarding my personal experience in
+current job market.
 
 ## Specialists Over Generalists
 As a software generalist, my skills are all over the map. I have
-worked in startups mostly, in various languages, in different stacks,
-etc. My polyglot, "jack of all trades, master of none" background
+worked in startups mostly, in various languages, and in different tech
+stacks. My polyglot, "jack of all trades, master of none" background
 seems particularly ill-suited to this very competitive market.
 
-Though I am searching primarily for Go jobs, these tend to bias more
-toward systems programming or "highly scalable" microservice,
-event-driven, _yada-yada-yada_ architectures, which all presume some
-level of proficiency with Kubernetes and prior experience scaling
-_billions_ of transactions per second. Unfortunately, I don't have a
-ton of on-the-job experience with Kubernetes, nor have a designed
-these kinds of data intensive applications from the ground up, so I am
+Though I am searching for backend _product_ engineering roles, because
+I am also looking primarily at companies that use Go in their tech
+stacks, most of the open roles I've seen are focused more on
+_platform_ engineering. This makes sense, as Go is a language that is
+particularly well suited to a lot of platform engineering
+tasks. Typically these roles require a fair amount of experience with
+container orchestration technologies, in particular Kubernetes. Since
+I don't have a ton of professional experience with Kubernetes, I am
 finding trouble positioning myself with hiring managers for these
 types of roles.
 
-While I have experience in web operations ("DevOps" / "Platform
-Engineering" / "SRE" / whatever) and full-stack development, my skills
-are not current enough or specialized enough to be seriously
-considered for these types of roles either.
+While I have some experience in web operations and "DevOps" more
+broadly (CI/CD, automation and the like) and full-stack development,
+my skills are not current enough or specialized enough to be seriously
+considered for these types of roles.
 
-## Tech Stack Alignment / "What Have You Done For Me Lately"
+## Tech Stack Alignment / "What Have You Done for Me Lately"
 At the other end of the spectrum, I interviewed for a role to lead a
 development team writing code for a monolithic Ruby on Rails
 application. Here, too, I failed to pass muster. Per a former
@@ -46,46 +47,73 @@ experience on my resume from my most recent role. So it seems like
 tech stack alignment and recency in that tech stack is particularly
 important now.
 
-## Long Live LeetCode
-LeetCode style technical assessments will unfortunately never go
-away. If anything, companies using them have made the process even
-more annoying, for example in their attempts to curb [AI-assisted
-cheating](https://tech.yahoo.com/articles/cheating-tech-interviews-soaring-managers-080901006.html)
-and interview fraud. So, I have to turn my camera on, and talk through
-my solution, even when there is no one present for me to talk
-to. These almost always seem to be used as part of a pre-interview
-screening process and require use of special web editors that I am not
-used to (though at least most of the ones I've tried support Emacs or
-vi key bindings).
+## Technical Screens
+I encountered most of the usual suspects for technical screens, but
+also one new format that I hadn't experienced (more on that
+below). Notably, companies appear to be utilizing pre-interview
+screening assessments more frequently than in days past.
 
-I am certainly not against writing code as part of an assessment, and
-in fact prefer them to the "take-home" style assessment, as those
-always end up taking at least double the amount of time indicated. In
-a recent interview for a senior engineer role, I was asked to
-implement an API endpoint for an inventory system, optimizing for read
-performance and integrating with a SQL database. I discussed how I
-would test it, scale it, and how it could be extended for future
-requirements. In other words, it focused on real-world engineering
-problems, and it felt more like structured pair programming. Fun,
-actually!
+### LeetCode&hellip; Yay
+Of course, there are your LeetCode style assessments. These were
+always annoying, and are now even more so, in part due to rampant
+[AI-assisted cheating](https://tech.yahoo.com/articles/cheating-tech-interviews-soaring-managers-080901006.html)
+and interview fraud making the experience worse for everyone. What
+this translates to in practice is use of _proctored_ tests. In one
+such test, I had to turn my camera on, solve a sequence of contrived
+algo problems, and explain my thought process throughout. The test
+proctor didn't interact with me outside of warning me when time was
+almost up. Then there are the ones where you have to use Codility
+or CodeSignal or any of the other enumerable web editors with
+automated test harnesses and the like. The unifying theme here is no
+intelocuter to bounce ideas off of or converse with. Not fun.
 
-It certainly would be nice if more employers used the above pair
-programming format, but I suspect they won't since it requires more
-effort on their part. And I can see how they may prefer pre-interview
-technical screens when trying to vet hundreds of candidates for a
-single role (did I mention that the job market stinks?). Still, I am
-sure I am not alone in my hatred for these kinds of tests. I always go
-back and forth on whether I should opt out of these entirely, but I
-will probably continue to do them.
+### Pair-Programming? Yay!
+One company I interviewed with for a senior engineer role conducted
+the interview using a structured pair-programming format. I was asked
+to implement an API endpoint for an inventory system, optimizing for
+read performance and integrating with a SQL database. I discussed how
+I would test it, scale it, and how it could be extended for future
+requirements. In other words, it focused on a real-world engineering
+problem. Fun, actually!
 
-## The Elephant In the Room
+### The "Take-Home"
+Then, of course, there are your so-called "take-home" projects. While
+I often enjoy these for the sake of learning, they tend to be a big
+time-sink and usually result in summary rejection. The ones that do
+get through, I end up spending at least double the amount of time
+stated to solve the problem. As an interview format, it feels too
+squishy and subject to the whims and biases of the person reading the
+code to be worthwhile, but I know a lot of people prefer these to the
+live coding interview format.
+
+### Uh...
+That leaves the weirdest one: a cognitive aptitude test. Specifically,
+the [Criteria Cognitive Aptitude
+Test](https://www.criteriacorp.com/candidates/ccat-prep) (CCAT), which
+I guess is a thing some companies are asking candidates to do now? I
+hate any and all standardized tests, so I opted out of this one,
+especially since the remainder of the interview process was going to
+be a gauntlet anyway.
+
+### Screen & Roll
+While unfortunate, I can see why companies use pre-interview technical
+screens when trying to vet hundreds of candidates for a single role
+(did I mention that the job market stinks?). Still, I am finding I
+have less tolerance for these types of assessments, especially the
+older I get, and the more automated and impersonal they become. I
+always go back and forth on whether I should opt out of these
+entirely, but I will probably continue to do them, as we software
+engineers continue our transformation into a 21st century digital
+[lumpenproletariat](https://www.newyorker.com/culture/infinite-scroll/will-ai-trap-you-in-the-permanent-underclass).
+
+## The Elephant in the Room
 Generative AI is the new wrench thrown into the interviewing
 experience, at least for me. When I have been lucky to get an
 interview with a real human and (even luckier still) get deep enough
 into the interview process to learn about how the team uses AI, it
 seems most teams are still figuring it out.
 
-### AI Technical Interviews
+### AI in Technical Interviews
 From the standpoint of technical interviews, most companies I have
 interviewed with thus far did not allow use of AI tools. In fact, most
 seemed wholly uninterested in evaluating how I personally use these
@@ -111,28 +139,26 @@ quality code, though I wonder how this expectation changes on the job
 when reviewers presumably need to write and review a large volume of
 LLM generated code on a daily basis.
 
-### AI In Practice
+### AI in Practice
 Among the hiring managers and devs for the roles I interviewed with,
 there was no clear consensus on how to effectively use AI as part of
 their business or engineering process. However, there were some common
-themes. All indicated challenges reviewing AI-generated code at scale
-and defining & implementing governance for agentic workflows. One
-hiring manager noted, correctly, that AI is a "force multiplier",
-i.e. it can have a multiplicative impact in either a positive or
-negative way. Most I talked to seemed to be taking a tactical and
-measured adoption of its use, and it's good to know that engineering
-teams (or at least this comparatively small sample size) are not
-totally cargo culting AI.
+themes. For example, all indicated challenges reviewing AI-generated
+code at scale and defining governance for agentic workflows. Most I
+talked to seemed to be taking a tactical and measured adoption of its
+use, which seemed like a good sign that (at least this relatively
+small sample of) teams are not totally cargo culting AI. One hiring
+manager described AI succinctly: AI is a "force multiplier".
 
 ## Where Have All the Junior Engineers Gone?
 Speaking of junior engineers, it seems many of these same companies
-are replacing junior talent with AI and/or hiring seniors
-exclusively. Honestly, it's hard to tell how much of this dislocation
+are no longer hiring junior talent and are hiring senior and staff
+engineers exclusively. It's hard to tell how much of this dislocation
 is due to AI or due to existing trends (based on experience from my
 most recent roles, I have seen fewer juniors and less emphasis on
-mentorship). There's a lot to parse in the current AI discourse right
-now, and how this informs hiring practices of junior talent I am not
-sure, but it is notable.
+mentorship overall). There's a lot to parse in the current AI
+discourse right now, and how this informs hiring practices of junior
+talent I am not sure, but it is notable.
 
 "We don't have the time to teach someone who is just starting out",
 "we need to hit the ground running", "we aren't able to do a lot of
@@ -141,24 +167,25 @@ that do have junior engineers on their team, unsurprisingly, call out
 mentorship explicitly in job descriptions.
 
 ## The Dreaded Job Gap Question
-Job gaps. I was laid off in October, and spent two months on garden
-leave, until my employment officially ended in December. I put on my
-resume that my most recent role ended in October, which in hindsight
-was probably a mistake. Almost everyone has asked me what I have been
-doing since October. In the past, I've only been out of work around 3
-months max and have never been asked this, but it seems to be a
-concern this time around. Perhaps this is reflective of the very
-risk-averse / buyer's market mentality of the current software job
-market.
+I was laid off in October, and spent two months on garden leave, until
+my employment officially ended in December. I put on my resume that my
+most recent role ended in October, which in hindsight was probably a
+mistake. Almost everyone has asked me what I have been doing since
+October. In the past, I've only been out of work around 3 months max
+and have never been asked this, but it seems to be a concern this time
+around. Perhaps this is reflective of the very risk-averse / buyer's
+market mentality of the current software job market.
 
 On a similar note, another hiring manager grilled me on why most of my
-roles have been between 2 and 3 years. I generally try to give a
-generic answer like "due to external factors beyond my control" (which
-is true, by the way, at least as far as I can tell), and redirect the
-conversation to express my desire for a long-term position. But this
-particular hiring manager kept probing. Fair enough, I suppose. But I
-am curious if they've ever been part of a layoff or have had the
-authority to make those decisions themselves.
+roles have been fewer than 3 years in length. I generally try to give
+a generic answer like "due to external factors beyond my
+control"—which is true for all but a few roles, by the way—and
+redirect the conversation by expressing my desire for a long-term
+position. But, when probing the circumstances around my departure from
+one particular company, the hiring manager seemed incredulous that I
+should be laid off given the seeming importance of my role. Fair
+enough, I guess. Sometimes you aren't gonna please people, no matter
+how hard you try.
 
 ## Miscellaneous
 
