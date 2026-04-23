@@ -9,7 +9,7 @@
              (srfi srfi-19)
              (srfi srfi-42)
              (icons)
-             (pages))
+             (publisher))
 
 (define (stylesheet ref)
   `(link (@ (rel "stylesheet")
@@ -147,5 +147,5 @@
                        (flat-pages "pages" #:template layout)
                        (static-directory "css")
                        (static-directory "js"))
-      #:publishers (list (pages-publisher)
-                         (pages-publisher #:name 'staging)))
+      #:publishers (list (cloudflare-pages-publisher)
+                         (cloudflare-pages-publisher #:name 'staging)))

@@ -1,12 +1,12 @@
-(define-module (pages)
+(define-module (publisher)
   #:use-module (haunt publisher)
   #:use-module (haunt site)
-  #:export (pages-publisher))
+  #:export (cloudflare-pages-publisher))
 
 (define %deploy-command "npx")
 (define %deploy-args '("wrangler" "pages" "deploy"))
 
-(define* (pages-publisher #:key (name %default-publisher-name))
+(define* (cloudflare-pages-publisher #:key (name %default-publisher-name))
   (define (publish site)
     (let ((args (append %deploy-args
                         (list (site-build-directory site)))))
