@@ -8,7 +8,8 @@
              (haunt site)
              (srfi srfi-19)
              (srfi srfi-42)
-             (icons))
+             (icons)
+             (pages))
 
 (define (stylesheet ref)
   `(link (@ (rel "stylesheet")
@@ -145,4 +146,6 @@
                        (atom-feeds-by-tag)
                        (flat-pages "pages" #:template layout)
                        (static-directory "css")
-                       (static-directory "js")))
+                       (static-directory "js"))
+      #:publishers (list (pages-publisher)
+                         (pages-publisher #:name 'staging)))
