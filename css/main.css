@@ -31,6 +31,21 @@ html {
     --font-size-sm: 0.85rem;
     --line-height: 1.6;
     --letter-spacing: 0.015em;
+
+    --prism-foreground: #1c1830;
+    --prism-background: #f1eef9;
+    --prism-comment: #5c5578;
+    --prism-string: #05611c;
+    --prism-punctuation: #5c5578;
+    --prism-literal: #6f5500;
+    --prism-keyword: #3548cf;
+    --prism-function: #7a1150;
+    --prism-deleted: #3548cf;
+    --prism-class: #005e8b;
+    --prism-builtin: #3548cf;
+    --prism-property: #005e8b;
+    --prism-namespace: #005e8b;
+    --prism-regex: #05611c;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -46,6 +61,21 @@ html {
         --tag-cyan: #00d3d0;
         --tag-magenta: #feacd0;
         --tag-green: #44bc44;
+
+        --prism-foreground: #e9e6f5;
+        --prism-background: #1e1b30;
+        --prism-comment: #a89fc4;
+        --prism-string: #44bc44;
+        --prism-punctuation: #a89fc4;
+        --prism-literal: #d0bc00;
+        --prism-keyword: #2fafff;
+        --prism-function: #feacd0;
+        --prism-deleted: #2fafff;
+        --prism-class: #00d3d0;
+        --prism-builtin: #2fafff;
+        --prism-property: #00d3d0;
+        --prism-namespace: #00d3d0;
+        --prism-regex: #44bc44;
     }
 }
 
@@ -61,6 +91,21 @@ html.dark {
     --tag-cyan: #00d3d0;
     --tag-magenta: #feacd0;
     --tag-green: #44bc44;
+
+    --prism-foreground: #e9e6f5;
+    --prism-background: #1e1b30;
+    --prism-comment: #a89fc4;
+    --prism-string: #44bc44;
+    --prism-punctuation: #a89fc4;
+    --prism-literal: #d0bc00;
+    --prism-keyword: #2fafff;
+    --prism-function: #feacd0;
+    --prism-deleted: #2fafff;
+    --prism-class: #00d3d0;
+    --prism-builtin: #2fafff;
+    --prism-property: #00d3d0;
+    --prism-namespace: #00d3d0;
+    --prism-regex: #44bc44;
 }
 
 html.light {
@@ -75,6 +120,21 @@ html.light {
     --tag-cyan: #005e8b;
     --tag-magenta: #7a1150;
     --tag-green: #05611c;
+
+    --prism-foreground: #1c1830;
+    --prism-background: #f1eef9;
+    --prism-comment: #5c5578;
+    --prism-string: #05611c;
+    --prism-punctuation: #5c5578;
+    --prism-literal: #6f5500;
+    --prism-keyword: #3548cf;
+    --prism-function: #7a1150;
+    --prism-deleted: #3548cf;
+    --prism-class: #005e8b;
+    --prism-builtin: #3548cf;
+    --prism-property: #005e8b;
+    --prism-namespace: #005e8b;
+    --prism-regex: #05611c;
 }
 
 a,
@@ -120,6 +180,7 @@ h1, h2, h3 {
 }
 
 .container {
+    width: 100%;
     max-width: var(--max-width);
     margin-inline: auto;
     padding-inline: var(--space-3);
@@ -409,7 +470,7 @@ html.light .icon-moon {
 }
 
 code {
-    background-color: var(--code-bg);
+    background-color: var(--prism-background);
     border-radius: 4px;
     font-family: var(--font-mono);
     font-size: 0.9em;
@@ -418,7 +479,7 @@ code {
 }
 
 pre {
-    background-color: var(--code-bg);
+    background-color: var(--prism-background);
     border-radius: 8px;
     padding: var(--space-3);
     overflow-x: auto;
@@ -428,6 +489,10 @@ pre code {
     padding: 0;
     font-size: 1em;
     background-color: none;
+}
+
+.post {
+    padding-bottom: var(--space-3);
 }
 
 .post :is(img, iframe) {

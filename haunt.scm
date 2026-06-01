@@ -36,7 +36,9 @@
     (link (@ (rel "stylesheet")
              (href "https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Manrope:wght@400;700&family=Bricolage+Grotesque:wght@700&display=swap")))
     ,(stylesheet "normalize.css")
+    ,(stylesheet "prism-base.css")
     ,(stylesheet "main.css")
+    ,(script "prism.js")
     ,(script "main.js")))
 
 (define nav
