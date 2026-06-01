@@ -26,6 +26,22 @@ html {
     --font-size: 1rem;
     --font-size-sm: 0.85rem;
     --line-height: 1.6;
+
+    /* prism variables for code syntax highlighting */
+    --prism-foreground: #1a1a1a;
+    --prism-background: #f8f8f8;
+    --prism-comment: #999988;
+    --prism-string: #c45100;
+    --prism-punctuation: #1a1a1a;
+    --prism-literal: #1e6bb8;
+    --prism-keyword: #1e6bb8;
+    --prism-function: #22863a;
+    --prism-deleted: #b31d28;
+    --prism-class: #8250a4;
+    --prism-builtin: #8250a4;
+    --prism-property: #c45100;
+    --prism-namespace: #6a737d;
+    --prism-regex: #c45100;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -37,6 +53,37 @@ html {
         --border: #333333;
         --accent: #3b82f6;
         --accent-hover: #60a5fa;
+
+        /* --prism-foreground: #d4d4d4; */
+        /* --prism-background: #2b2b2b; */
+        /* /\*--prism-background: #1e1e1e;*\/ */
+        /* --prism-comment: #758575; */
+        /* --prism-string: #ce9178; */
+        /* --prism-punctuation: #d4d4d4; */
+        /* --prism-literal: #36acaa; */
+        /* --prism-keyword: #38a776; */
+        /* --prism-function: #dcdcaa; */
+        /* --prism-deleted: #9a050f; */
+        /* --prism-class: #4ec9b0; */
+        /* --prism-builtin: #d16969; */
+        /* --prism-property: #ce9178; */
+        /* --prism-namespace: #aaaaaa; */
+        /* --prism-regex: #ad502b; */
+
+        --prism-foreground: #e6e6e6;
+        --prism-background: #282828;
+        --prism-comment: #6e7681;
+        --prism-string: #f69d50;
+        --prism-punctuation: #e6e6e6;
+        --prism-literal: #6cb6ff;
+        --prism-keyword: #6cb6ff;
+        --prism-function: #57ab5a;
+        --prism-deleted: #ff7b72;
+        --prism-class: #dcbdfb;
+        --prism-builtin: #dcbdfb;
+        --prism-property: #f69d50;
+        --prism-namespace: #8b949e;
+        --prism-regex: #f69d50;
     }
 }
 
@@ -47,6 +94,21 @@ html.dark {
     --text: #e0e0e0;
     --text-muted: #aaaaaa;
     --border: #333333;
+
+    --prism-foreground: #e6e6e6;
+    --prism-background: #202020;
+    --prism-comment: #6e7681;
+    --prism-string: #f69d50;
+    --prism-punctuation: #e6e6e6;
+    --prism-literal: #6cb6ff;
+    --prism-keyword: #6cb6ff;
+    --prism-function: #57ab5a;
+    --prism-deleted: #ff7b72;
+    --prism-class: #dcbdfb;
+    --prism-builtin: #dcbdfb;
+    --prism-property: #f69d50;
+    --prism-namespace: #8b949e;
+    --prism-regex: #f69d50;
 }
 
 html.light {
@@ -57,6 +119,21 @@ html.light {
     --border: #dcdcdc;
     --accent: #2563eb;
     --accent-hover: #1d4ed8;
+
+    --prism-foreground: #1a1a1a;
+    --prism-background: #f8f8f8;
+    --prism-comment: #999988;
+    --prism-string: #c45100;
+    --prism-punctuation: #1a1a1a;
+    --prism-literal: #1e6bb8;
+    --prism-keyword: #1e6bb8;
+    --prism-function: #22863a;
+    --prism-deleted: #b31d28;
+    --prism-class: #8250a4;
+    --prism-builtin: #8250a4;
+    --prism-property: #c45100;
+    --prism-namespace: #6a737d;
+    --prism-regex: #c45100;
 }
 
 a,
@@ -332,7 +409,7 @@ html.light .theme-toggle::after {
 }
 
 code {
-    background-color: var(--code-bg);
+    background-color: var(--prism-background);
     border-radius: 4px;
     font-family: var(--font-mono);
     font-size: 0.9em;
@@ -340,7 +417,7 @@ code {
 }
 
 pre {
-    background-color: var(--code-bg);
+    background-color: var(--prism-background);
     border-radius: 8px;
     padding: var(--space-3);
     overflow-x: auto;

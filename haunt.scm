@@ -30,7 +30,9 @@
              (content "width=device-width, initial-scale=1")))
     (title ,(string-append title " — " (site-title site)))
     ,(stylesheet "normalize.css")
+    ,(stylesheet "prism-base.css")
     ,(stylesheet "main.css")
+    ,(script "prism.js")
     ,(script "main.js")))
 
 (define nav
