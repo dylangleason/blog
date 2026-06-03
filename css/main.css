@@ -351,3 +351,20 @@ pre code {
     font-size: 1em;
     background-color: none;
 }
+
+.post :is(img, iframe) {
+    display: block;
+    max-width: 100%;
+    margin: 1.5rem auto;
+}
+
+.post img {
+    height: auto;
+}
+
+.post iframe {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    height: auto;
+    border: 0;
+}

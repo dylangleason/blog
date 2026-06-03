@@ -4,11 +4,11 @@
              (haunt builder flat-pages)
              (haunt html)
              (haunt post)
-             (haunt reader commonmark)
              (haunt site)
              (srfi srfi-19)
              (srfi srfi-42)
              (icons)
+             (reader)
              (publisher))
 
 (define (stylesheet ref)
@@ -138,7 +138,7 @@
       #:domain "example.com"
       #:default-metadata '((author . "Dylan Gleason"))
       #:posts-directory "posts"
-      #:readers (list commonmark-reader)
+      #:readers (list dg-markdown-reader)
       #:builders (list (blog #:theme theme
                              #:post-prefix "/posts"
                              #:posts-per-page 10)
