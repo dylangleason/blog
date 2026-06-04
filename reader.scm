@@ -23,15 +23,19 @@
   (make-reader
    (make-file-extension-matcher "md")
    (lambda (file-name)
-     (let-values (((metadata sxml) (reader-read commonmark-reader file-name)))
+     (let-values (((metadata sxml)
+                   (reader-read commonmark-reader file-name)))
        (values
         metadata
         (pre-post-order
          sxml
-         `((code . ,(lambda (sym tree)
-                      (if (and (string? tree)
-                               (string-contains tree "youtube"))
-                          (make-video-iframe tree)
-                          tree)))
+         `((code . ,(lambda (sym . tree)
+                      (if (and (pair? tree)
+                               (null? (cdr tree))
+                               (string? (car tree)))
+                          (if (string-prefix? "youtube:" (car tree))
+                              (make-video-iframe (car tree))
+                              (cons sym tree))
+                          (cons sym tree))))
            (*text* . ,(lambda (sym text) text))
            (*default* . ,(lambda arg arg)))))))))
