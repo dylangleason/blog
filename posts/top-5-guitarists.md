@@ -16,7 +16,7 @@ Most listeners will recognize George Benson from his 1976 smash hit
 ["Breezin'"](https://www.youtube.com/watch?v=G1QjyskJ9jw), which helped
 usher in the smooth jazz era and for a time was a fixture of
 supermarket background music heard across America (alongside Chuck
-Mangione's ["Feel So Good"](https://www.youtube.com/watch?v=YKp7g0mxHVc)). But don't get it
+Mangione's ["Feels So Good"](https://www.youtube.com/watch?v=YKp7g0mxHVc)). But don't get it
 twisted—George Benson is a certified guitar hero. I am most familiar
 with his output on CTI records, because records released on that label
 were very easy to find on the second-hand market back when I was
