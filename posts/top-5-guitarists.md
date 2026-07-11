@@ -1,6 +1,6 @@
 title: Top 5 Guitarists of All Time (Or, Just Those I Am Listening to Now)
 date: 2026-05-31 21:39
-tags: music, life
+tags: music
 ---
 
 The other day, a good friend of mine asked me over the group chat who
