@@ -25,7 +25,6 @@ html {
     --font-title: "Bricolage Grotesque", var(--font-body);
     --font-size: 1rem;
     --font-size-sm: 0.85rem;
-    --font-size-xs: 0.65rem;
     --line-height: 1.6;
     --letter-spacing: 0.015em;
 }
