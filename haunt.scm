@@ -29,6 +29,10 @@
     (meta (@ (name "viewport")
              (content "width=device-width, initial-scale=1")))
     (title ,(string-append title " — " (site-title site)))
+    (link (@ (rel "preconnect") (href "https://fonts.googleapis.com")))
+    (link (@ (rel "preconnect") (href "https://fonts.gstatic.com") (crossorigin "")))
+    (link (@ (rel "stylesheet")
+             (href "https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Manrope:wght@400;700&family=Bricolage+Grotesque:wght@700&display=swap")))
     ,(stylesheet "normalize.css")
     ,(stylesheet "main.css")
     ,(script "main.js")))
@@ -49,8 +53,7 @@
      (li (a (@ (href "/feed.xml")) ,feed-icon "feed"))
      (li (a (@ (href "/about.html")) ,about-icon "about"))
      (li (a (@ (href "//github.com/dylangleason")) ,github-icon "github"))
-     (li (a (@ (href "//linkedin.com/in/dylangleason")) ,linkedin-icon "linkedin")))
-    (button (@ (class "theme-toggle")))))
+     (li (a (@ (href "//linkedin.com/in/dylangleason")) ,linkedin-icon "linkedin")))))
 
 (define (post-preview post)
   (let loop ((lst (post-sxml post)))
@@ -112,7 +115,13 @@
     (span "\u00A9 2026 Dylan Gleason")
     (span "\u22c5")
     (span "Built w/ "
-          (a (@ (href "//dthompson.us/projects/haunt.html")) "Haunt"))))
+          (a (@ (href "//dthompson.us/projects/haunt.html")) "Haunt"))
+    (span "\u22c5")
+    (button (@ (class "theme-toggle")
+               (aria-label "Toggle dark mode")
+               (aria-pressed "false"))
+            (span (@ (class "icon-sun")) ,sun-icon)
+            (span (@ (class "icon-moon")) ,moon-icon))))
 
 (define (layout site title body)
   `((doctype "html")
@@ -126,6 +135,9 @@
             (@ (class "main"))
             ,body)
            ,footer)))))
+
+(define (flat-page-template site metadata body)
+  (layout site (or (assq-ref metadata 'title) "Untitled") body))
 
 (define theme
   (theme #:name "main"
@@ -144,7 +156,7 @@
                              #:posts-per-page 10)
                        (atom-feed)
                        (atom-feeds-by-tag)
-                       (flat-pages "pages" #:template layout)
+                       (flat-pages "pages" #:template flat-page-template)
                        (static-directory "css")
                        (static-directory "js"))
       #:publishers (list (cloudflare-pages-publisher)

@@ -27,6 +27,7 @@
     if (!currentTheme) {
       currentTheme = getSystemTheme()
     }
+    toggleButton.setAttribute("aria-pressed", currentTheme === "dark")
 
     toggleButton.addEventListener("click", _ => {
       const docElement = document.documentElement
@@ -38,6 +39,7 @@
       currentTheme = toggleTheme(currentTheme)
       docElement.classList.add(currentTheme)
       localStorage.setItem("theme", currentTheme)
+      toggleButton.setAttribute("aria-pressed", currentTheme === "dark")
     })
   })
 })()
