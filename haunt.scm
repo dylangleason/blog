@@ -32,7 +32,7 @@
     (link (@ (rel "preconnect") (href "https://fonts.googleapis.com")))
     (link (@ (rel "preconnect") (href "https://fonts.gstatic.com") (crossorigin "")))
     (link (@ (rel "stylesheet")
-             (href "https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Manrope:wght@400;500;600;700&family=Bricolage+Grotesque:wght@600;700;800&display=swap")))
+             (href "https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Manrope:wght@400;700&family=Bricolage+Grotesque:wght@700&display=swap")))
     ,(stylesheet "normalize.css")
     ,(stylesheet "main.css")
     ,(script "main.js")))
@@ -118,7 +118,8 @@
           (a (@ (href "//dthompson.us/projects/haunt.html")) "Haunt"))
     (span "\u22c5")
     (button (@ (class "theme-toggle")
-               (aria-label "Toggle dark mode"))
+               (aria-label "Toggle dark mode")
+               (aria-pressed "false"))
             (span (@ (class "icon-sun")) ,sun-icon)
             (span (@ (class "icon-moon")) ,moon-icon))))
 
