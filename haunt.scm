@@ -40,20 +40,22 @@
 (define nav
   `(nav
     (@ (class "nav"))
-    (ul
-     (@ (class "title"))
-     (li (a (@ (href "/")) "dylan gleason")))
-    (button (@ (class "nav-toggle")
-               (aria-label "Toggle navigation")
-               (aria-expanded "false"))
-            (span))
-    (ul
-     (@ (class "links"))
-     (li (a (@ (href "/index.html")) ,posts-icon "posts"))
-     (li (a (@ (href "/feed.xml")) ,feed-icon "feed"))
-     (li (a (@ (href "/about.html")) ,about-icon "about"))
-     (li (a (@ (href "//github.com/dylangleason")) ,github-icon "github"))
-     (li (a (@ (href "//linkedin.com/in/dylangleason")) ,linkedin-icon "linkedin")))))
+    (div
+     (@ (class "container"))
+     (ul
+      (@ (class "title"))
+      (li (a (@ (href "/")) "dylan gleason")))
+     (button (@ (class "nav-toggle")
+                (aria-label "Toggle navigation")
+                (aria-expanded "false"))
+             (span))
+     (ul
+      (@ (class "links"))
+      (li (a (@ (href "/index.html")) ,posts-icon "posts"))
+      (li (a (@ (href "/feed.xml")) ,feed-icon "feed"))
+      (li (a (@ (href "/about.html")) ,about-icon "about"))
+      (li (a (@ (href "//github.com/dylangleason")) ,github-icon "github"))
+      (li (a (@ (href "//linkedin.com/in/dylangleason")) ,linkedin-icon "linkedin"))))))
 
 (define (post-preview post)
   (let loop ((lst (post-sxml post)))
@@ -112,16 +114,18 @@
 (define footer
   `(footer
     (@ (class "footer"))
-    (span "\u00A9 2026 Dylan Gleason")
-    (span "\u22c5")
-    (span "Built w/ "
-          (a (@ (href "//dthompson.us/projects/haunt.html")) "Haunt"))
-    (span "\u22c5")
-    (button (@ (class "theme-toggle")
-               (aria-label "Toggle dark mode")
-               (aria-pressed "false"))
-            (span (@ (class "icon-sun")) ,sun-icon)
-            (span (@ (class "icon-moon")) ,moon-icon))))
+    (div
+     (@ (class "container"))
+     (span "\u00A9 2026 Dylan Gleason")
+     (span "\u22c5")
+     (span "Built w/ "
+           (a (@ (href "//dthompson.us/projects/haunt.html")) "Haunt"))
+     (span "\u22c5")
+     (button (@ (class "theme-toggle")
+                (aria-label "Toggle dark mode")
+                (aria-pressed "false"))
+             (span (@ (class "icon-sun")) ,sun-icon)
+             (span (@ (class "icon-moon")) ,moon-icon)))))
 
 (define (layout site title body)
   `((doctype "html")
@@ -129,10 +133,10 @@
      (@ (lang "en"))
      ,(head title site)
      (body
-      (div (@ (class "container"))
+      (div (@ (class "page"))
            ,nav
            (main
-            (@ (class "main"))
+            (@ (class "main container"))
             ,body)
            ,footer)))))
 
