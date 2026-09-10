@@ -12,8 +12,8 @@ html {
     --text: #1c1830;
     --text-muted: #5c5578;
     --border: #ddd8ec;
-    --accent: #0031a9;
-    --accent-hover: #3548cf;
+    --accent: #3548cf;
+    --accent-hover: #5673f5;
     --tag-yellow: #6f5500;
     --tag-cyan: #005e8b;
     --tag-magenta: #7a1150;
@@ -69,8 +69,8 @@ html.light {
     --text: #1c1830;
     --text-muted: #5c5578;
     --border: #ddd8ec;
-    --accent: #0031a9;
-    --accent-hover: #3548cf;
+    --accent: #3548cf;
+    --accent-hover: #5673f5;
     --tag-yellow: #6f5500;
     --tag-cyan: #005e8b;
     --tag-magenta: #7a1150;
