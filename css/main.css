@@ -7,13 +7,17 @@ html {
 }
 
 :root {
-    --bg: #ffffff;
-    --code-bg: #ebebeb;
-    --text: #1a1a1a;
-    --text-muted: #666666;
-    --border: #dcdcdc;
-    --accent: #2563eb;
-    --accent-hover: #1d4ed8;
+    --bg: #fbfaff;
+    --code-bg: #f1eef9;
+    --text: #1c1830;
+    --text-muted: #5c5578;
+    --border: #ddd8ec;
+    --accent: #3548cf;
+    --accent-hover: #5673f5;
+    --tag-yellow: #6f5500;
+    --tag-cyan: #005e8b;
+    --tag-magenta: #7a1150;
+    --tag-green: #05611c;
     --space-1: 0.25rem;
     --space-2: 0.5rem;
     --space-3: 1rem;
@@ -31,30 +35,46 @@ html {
 
 @media (prefers-color-scheme: dark) {
     :root {
-        --bg: #1a1a1a;
-        --text: #e0e0e0;
-        --text-muted: #aaaaaa;
-        --border: #333333;
-        --accent: #3b82f6;
-        --accent-hover: #60a5fa;
+        --bg: #131120;
+        --code-bg: #1e1b30;
+        --text: #e9e6f5;
+        --text-muted: #a89fc4;
+        --border: #37324f;
+        --accent: #2fafff;
+        --accent-hover: #79a8ff;
+        --tag-yellow: #d0bc00;
+        --tag-cyan: #00d3d0;
+        --tag-magenta: #feacd0;
+        --tag-green: #44bc44;
     }
 }
 
 html.dark {
-    --bg: #1a1a1a;
-    --code-bg: #3b3b3b;
-    --text: #e0e0e0;
-    --text-muted: #aaaaaa;
-    --border: #333333;
+    --bg: #131120;
+    --code-bg: #1e1b30;
+    --text: #e9e6f5;
+    --text-muted: #a89fc4;
+    --border: #37324f;
+    --accent: #2fafff;
+    --accent-hover: #79a8ff;
+    --tag-yellow: #d0bc00;
+    --tag-cyan: #00d3d0;
+    --tag-magenta: #feacd0;
+    --tag-green: #44bc44;
 }
 
 html.light {
-    --bg: #ffffff;
-    --text: #1a1a1a;
-    --text-muted: #666666;
-    --border: #dcdcdc;
-    --accent: #2563eb;
-    --accent-hover: #1d4ed8;
+    --bg: #fbfaff;
+    --code-bg: #f1eef9;
+    --text: #1c1830;
+    --text-muted: #5c5578;
+    --border: #ddd8ec;
+    --accent: #3548cf;
+    --accent-hover: #5673f5;
+    --tag-yellow: #6f5500;
+    --tag-cyan: #005e8b;
+    --tag-magenta: #7a1150;
+    --tag-green: #05611c;
 }
 
 a,
@@ -355,10 +375,27 @@ html.light .icon-moon {
 
 .tags {
     display: flex;
+    flex-wrap: wrap;
     color: var(--text-muted);
     gap: var(--space-2);
     font-size: 0.9em;
     padding-block: var(--space-2);
+}
+
+.tags a:nth-of-type(4n+1) {
+    color: var(--tag-yellow);
+}
+
+.tags a:nth-of-type(4n+2) {
+    color: var(--tag-cyan);
+}
+
+.tags a:nth-of-type(4n+3) {
+    color: var(--tag-magenta);
+}
+
+.tags a:nth-of-type(4n) {
+    color: var(--tag-green);
 }
 
 code {
