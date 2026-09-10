@@ -8,7 +8,6 @@ html {
 
 :root {
     --bg: #ffffff;
-    --bg-shift: #fdfdfd;
     --code-bg: #ebebeb;
     --text: #1a1a1a;
     --text-muted: #666666;
@@ -21,17 +20,19 @@ html {
     --space-4: 1.5rem;
     --space-5: 2rem;
     --max-width: 780px;
-    --font-body: system-ui, sans-serif;
-    --font-mono: ui-monospace, monospace;
+    --font-body: "Manrope", system-ui, sans-serif;
+    --font-mono: "JetBrains Mono", ui-monospace, monospace;
+    --font-title: "Bricolage Grotesque", var(--font-body);
     --font-size: 1rem;
     --font-size-sm: 0.85rem;
+    --font-size-xs: 0.65rem;
     --line-height: 1.6;
+    --letter-spacing: 0.015em;
 }
 
 @media (prefers-color-scheme: dark) {
     :root {
         --bg: #1a1a1a;
-        --bg-shift: #222222;
         --text: #e0e0e0;
         --text-muted: #aaaaaa;
         --border: #333333;
@@ -42,7 +43,6 @@ html {
 
 html.dark {
     --bg: #1a1a1a;
-    --bg-shift: #222222;
     --code-bg: #3b3b3b;
     --text: #e0e0e0;
     --text-muted: #aaaaaa;
@@ -51,7 +51,6 @@ html.dark {
 
 html.light {
     --bg: #ffffff;
-    --bg-shift: #fdfdfd;
     --text: #1a1a1a;
     --text-muted: #666666;
     --border: #dcdcdc;
@@ -73,8 +72,8 @@ pre,
 .nav-toggle span::after,
 .nav-toggle span::before,
 .preview,
-.preview:nth-child(even),
 .tags,
+.theme-toggle,
 .title a {
     transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
 }
@@ -85,7 +84,14 @@ body {
     font-family: var(--font-body);
     font-size: var(--font-size);
     line-height: var(--line-height);
+    letter-spacing: var(--letter-spacing);
     margin: 0;
+}
+
+h1, h2, h3 {
+    font-family: var(--font-title);
+    font-weight: 700;
+    letter-spacing: normal;
 }
 
 .container {
@@ -230,7 +236,7 @@ nav a:hover {
 
 .title a {
     color: var(--text);
-    font-family: ui-monospace, monospace;
+    font-family: var(--font-mono);
     letter-spacing: 0.1em;
     font-weight: bold;
     font-size: var(--font-size-sm);
@@ -256,11 +262,12 @@ main h1 {
     display: flex;
     flex-direction: column;
     gap: var(--space-2);
-    padding-block: var(--space-3);
+    padding-block: var(--space-4);
+    border-bottom: 1px solid var(--border);
 }
 
-.preview:nth-child(even) {
-    background-color: var(--bg-shift);
+.preview:last-child {
+    border-bottom: none;
 }
 
 .preview h2 {
@@ -281,6 +288,7 @@ main h1 {
 
 footer {
     display: flex;
+    align-items: center;
     justify-content: center;
     gap: var(--space-2);
     border-top: 1px solid var(--border);
@@ -289,33 +297,56 @@ footer {
 }
 
 .theme-toggle {
-    width: 48px;
-    height: 26px;
-    background-color: var(--border);
-    border-radius: 13px;
-    color: var(--text-muted);
-    position: relative;
-}
-
-.theme-toggle::after {
-    content: "";
-    display: flex;
+    display: inline-flex;
     align-items: center;
     justify-content: center;
-    color: var(--bg);
-    position: absolute;
-    width: 22px;
-    height: 22px;
-    border: 1px solid var(--text);
-    border-radius: 50%;
-    background-color: var(--text);
-    left: 2px;
-    top: 2px;
-    transition: transform 0.2s ease;
+    width: 28px;
+    height: 28px;
+    color: var(--text-muted);
 }
 
-html.light .theme-toggle::after {
-    transform: translateX(22px);
+.theme-toggle:hover {
+    color: var(--text);
+}
+
+.theme-toggle svg {
+    width: 16px;
+    height: 16px;
+}
+
+.icon-sun,
+.icon-moon {
+    display: none;
+}
+
+.icon-moon {
+    display: block;
+}
+
+@media (prefers-color-scheme: dark) {
+    .icon-sun {
+        display: block;
+    }
+
+    .icon-moon {
+        display: none;
+    }
+}
+
+html.dark .icon-sun {
+    display: block;
+}
+
+html.dark .icon-moon {
+    display: none;
+}
+
+html.light .icon-sun {
+    display: none;
+}
+
+html.light .icon-moon {
+    display: block;
 }
 
 .byline {
@@ -336,6 +367,7 @@ code {
     border-radius: 4px;
     font-family: var(--font-mono);
     font-size: 0.9em;
+    letter-spacing: normal;
     padding: var(--space-1) var(--space-2) var(--space-1) var(--space-2);
 }
 
