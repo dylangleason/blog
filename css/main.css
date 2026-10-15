@@ -9,6 +9,7 @@ html {
 :root {
     --bg: #fbfaff;
     --code-bg: #f1eef9;
+    --quote-background: #f1eef9;
     --text: #1c1830;
     --text-muted: #5c5578;
     --border: #ddd8ec;
@@ -52,6 +53,7 @@ html {
     :root {
         --bg: #131120;
         --code-bg: #1e1b30;
+        --quote-background: #1e1b30;
         --text: #e9e6f5;
         --text-muted: #a89fc4;
         --border: #37324f;
@@ -82,6 +84,7 @@ html {
 html.dark {
     --bg: #131120;
     --code-bg: #1e1b30;
+    --quote-background: #1e1b30;
     --text: #e9e6f5;
     --text-muted: #a89fc4;
     --border: #37324f;
@@ -111,6 +114,7 @@ html.dark {
 html.light {
     --bg: #fbfaff;
     --code-bg: #f1eef9;
+    --quote-background: #f1eef9;
     --text: #1c1830;
     --text-muted: #5c5578;
     --border: #ddd8ec;
@@ -467,6 +471,18 @@ html.light .icon-moon {
 
 .tags a:nth-of-type(4n) {
     color: var(--tag-green);
+}
+
+blockquote {
+    font-style: italic;
+    border-radius: 4px;
+    background-color: var(--quote-background);
+    border-left: 8px solid var(--text-muted);
+    padding: var(--space-4);
+}
+
+blockquote > p {
+    display: inline;
 }
 
 code {
