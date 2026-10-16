@@ -15,9 +15,9 @@ using another editor before it, and it was **the** editor I wrote my
 first line of code in (_editor's note_: this was me
 confabulating—technically, my first line of code was written in
 SuperCollider.app, a graphical environment for programming
-SuperCollider, the latter of which is mentioned below). Since picking
-up Emacs, I've seen numerous editors and IDEs over the years, but none
-of them stuck with me or interested me as much as Emacs.
+SuperCollider, the latter of which I mention below). Since picking up
+Emacs, I've seen numerous editors and IDEs over the years, but none of
+them stuck with me or interested me as much as Emacs.
 
 I can't place the exact date, but my journey with Emacs started back
 in the late aughts. Unsurprisingly, my first encounter with it
