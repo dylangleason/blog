@@ -11,10 +11,13 @@ make this work in [Emacs](https://www.gnu.org/software/emacs/)?
 ## Background: My Emacs Journey
 
 I am an Emacs lifer. Other than Notepad or TextEdit, I can't recall
-using another editor before it, and it was _the_ editor I wrote my
-first line of code in. Since picking up Emacs, I've seen numerous
-editors and IDEs over the years, but none of them stuck with me or
-interested me as much as Emacs.
+using another editor before it, and it was **the** editor I wrote my
+first line of code in (_editor's note_: this was me
+confabulating—technically, my first line of code was written in
+SuperCollider.app, a graphical environment for programming
+SuperCollider, the latter of which is mentioned below). Since picking
+up Emacs, I've seen numerous editors and IDEs over the years, but none
+of them stuck with me or interested me as much as Emacs.
 
 I can't place the exact date, but my journey with Emacs started back
 in the late aughts. Unsurprisingly, my first encounter with it
@@ -36,9 +39,9 @@ entirely new world to me.
 
 After installing Xubuntu on my netbook, my first order of business was
 to install SuperCollider and continue my audio experiments
-there. However, SuperCollider, being primarily a MacOS focused
-project, did not ship their SCIDE integrated development environment
-to Linux. The only two options were Vim and—you guessed it—Emacs. For
+there. However, SuperCollider, being primarily a MacOS focused project
+at that time, did not ship their integrated development environment to
+Linux. The only two options were Vim and—you guessed it—Emacs. For
 better or for worse (some might say worse&hellip; and they might have
 a point 😅), I chose Emacs.
 
