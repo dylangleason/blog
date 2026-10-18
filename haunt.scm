@@ -166,7 +166,6 @@
                        (atom-feeds-by-tag)
                        (flat-pages "pages" #:template flat-page-template)
                        (static-directory "css")
-                       (static-directory "js")
-                       (static-directory "redirects" ""))
+                       (static-directory "js"))
       #:publishers (list (cloudflare-pages-publisher)
                          (cloudflare-pages-publisher #:name 'staging)))
