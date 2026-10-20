@@ -28,6 +28,8 @@
     (meta (@ (charset "utf-8")))
     (meta (@ (name "viewport")
              (content "width=device-width, initial-scale=1")))
+    (meta (@ (name "author")
+             (content "Dylan Gleason")))
     (meta (@ (name "google-site-verification")
              (content "kQFmeK--0-dUiF3Fjw6OYsFrKEZaCD15QH3_ek7AgLA")))
     (title ,(string-append title " — " (site-title site)))
