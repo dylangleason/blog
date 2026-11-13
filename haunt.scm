@@ -61,7 +61,8 @@
       (li (a (@ (href "/feed.xml")) ,feed-icon "feed"))
       (li (a (@ (href "/about.html")) ,about-icon "about"))
       (li (a (@ (href "//github.com/dylangleason")) ,github-icon "github"))
-      (li (a (@ (href "//linkedin.com/in/dylangleason")) ,linkedin-icon "linkedin"))))))
+      (li (a (@ (href "//linkedin.com/in/dylangleason")) ,linkedin-icon "linkedin"))
+      (li (a (@ (href "////www.wyzant.com/match/tutor/89584458")) ,book-icon "wyzant"))))))
 
 (define (post-preview post)
   (let loop ((lst (post-sxml post)))
