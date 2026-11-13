@@ -11,7 +11,7 @@ security hygiene when using AI agents.
 ## Running AI Agents Locally
 
 The security implications of running non-deterministic LLM systems
-locally, which has access to my file system and the ability to
+locally, which have access to my file system and the ability to
 communicate to the internet, should have been an obvious red flag from
 the start. But it is all too easy (and I include myself in this) to be
 lulled into complacency based on thin assurances from AI vendors,
